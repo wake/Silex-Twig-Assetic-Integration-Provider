@@ -1,0 +1,29 @@
+{
+  "name": "wake/twig-assetic-bunlde-provider",
+  "description": "Twig / Assetic bundle provdider ",
+  "version": "v0.0.0",
+  "type": "library",
+  "keywords": ["twig", "assetic", "silex"],
+  "homepage": "https://github.com/wake/Twig-Assetic-Bundle-Provider",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wake Liu",
+      "email": "wake.gs@gmail.com",
+      "homepage": "http://wake.gs"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/wake/Twig-Assetic-Bundle-Provider/issues",
+    "source": "https://github.com/wake/Twig-Assetic-Bundle-Provider"
+  },
+  "require": {
+      "kriswallsmith/assetic": "~1.3",
+      "twig/twig": "~1.12"
+  },
+  "autoload": {
+      "psr-0": {
+          "TwigAsseticBundleProvider": "src/" 
+      }
+  }
+}
