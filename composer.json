@@ -24,8 +24,8 @@
   },
   "autoload": {
     "psr-0": {
-      "Silex": "src/Silex",
-      "Twig": "src/Twig"
+      "Silex\\": "src/",
+      "Twig_": "src/"
     }
   }
 }
