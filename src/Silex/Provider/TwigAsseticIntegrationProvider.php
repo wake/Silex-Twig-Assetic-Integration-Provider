@@ -31,7 +31,7 @@
     function register (Application $app) {
 
       $app['assetic.asset.root'] = '';
-      $app['assetic.asset.asset_root'] = '';
+      $app['assetic.asset.output_root'] = '';
       $app['assetic.debug'] = false;
       $app['assetic.filters'] = array (
         'csscopyfile' => true,
@@ -54,7 +54,7 @@
 
       $app['assetic.asset_factory'] = $app->share (function ($app) {
         $assetFactory = new AssetFactory ($app['assetic.asset.root']);
-        $assetFactory->setDefaultOutput ($app['assetic.asset.asset_root']);
+        $assetFactory->setDefaultOutput ($app['assetic.asset.output_root']);
         $assetFactory->setFilterManager ($app['assetic.filter_manager']);
         $assetFactory->setAssetManager ($app['assetic.asset_manager']);
         $assetFactory->setDebug ($app['assetic.debug']);
@@ -68,7 +68,7 @@
       });
 
       $app['assetic.asset_writer'] = $app->share (function ($app) {
-        $assetWriter = new AssetWriter ($app['assetic.asset.asset_root']);
+        $assetWriter = new AssetWriter ($app['assetic.asset.output_root']);
         return $assetWriter;
       });
 
