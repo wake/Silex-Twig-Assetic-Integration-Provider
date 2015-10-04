@@ -6,7 +6,7 @@
    *
    * @author Wake Liu <wake.gs@gmail.com>
    */
-  class Twig_AsseticLoader_Filesystem extends Twig_Loader_Filesystem implements Twig_AsseticLoaderInterface {
+  class Twig_AsseticLoader_Filesystem extends \Twig_Loader_Filesystem implements Twig_AsseticLoaderInterface {
 
     /**
      * Get loader instances.

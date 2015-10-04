@@ -6,7 +6,7 @@
    *
    * @author Wake Liu <wake.gs@gmail.com>
    */
-  class Twig_AsseticLoader_Chain extends Twig_Loader_Chain implements Twig_AsseticLoaderInterface {
+  class Twig_AsseticLoader_Chain extends \Twig_Loader_Chain implements Twig_AsseticLoaderInterface {
 
     /**
      * Get loader instances.
