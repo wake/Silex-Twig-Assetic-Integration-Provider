@@ -1,10 +1,33 @@
 # Twig Assetic Integration Provider
 
-This library is an integration of [Twig](http://twig.sensiolabs.org) and [Assetic](https://github.com/kriswallsmith/assetic) works for [Silex](http://silex.sensiolabs.org/).
+This is an integration library of [Twig](http://twig.sensiolabs.org) and [Assetic](https://github.com/kriswallsmith/assetic) works for [Silex](http://silex.sensiolabs.org/).
 
-The original [twig extension of Assetic](https://github.com/kriswallsmith/assetic#twig) is not easy to use. There's a lot of work (code) to do and you need always to know which templates require assets.
+The original [Twig extension of Assetic](https://github.com/kriswallsmith/assetic#twig) is not easy to use. There's a lot of work (code) to do and you need always to know which templates require assets.
+
+This integration library will handle it automatically.
+
+## Installation
+
+Add in your `composer.json` with following require entry:
+
+```json
+{
+    "require": {
+        "wake/Twig-Assetic-Integration-Provider": "*"
+    }
+}
+```
+
+or using composer:
+
+```bash
+$ composer require wake/Twig-Assetic-Integration-Provider:*
+```
+
+then run `composer install` or `composer update`.
 
 ## Registering
+
 
 ```php
 $app->register (new Silex\Provider\TwigAsseticIntegrationProvider (), array (
@@ -14,7 +37,7 @@ $app->register (new Silex\Provider\TwigAsseticIntegrationProvider (), array (
 ));
 ```
 
-Important: You need to register [Twig service](http://silex.sensiolabs.org/doc/providers/twig.html) before this code. We override some Twig loaders to force it expode some template informations.
+Important: Make sure you are using [TwigServiceProvider](http://silex.sensiolabs.org/doc/providers/twig.html) and have registered before this code. It override some Twig loaders to force it expode little template informations.
 
 ## Usage
 
@@ -25,3 +48,11 @@ Juse like [Assetic twig extension](https://github.com/kriswallsmith/assetic#twig
     <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
 {% endstylesheets %}
 ```
+
+## Feedback
+
+Please feel free to open an issue and let me know if there is any thoughts or questions :smiley:
+
+## License
+
+Released under the MIT license
