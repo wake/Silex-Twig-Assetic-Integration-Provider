@@ -12,9 +12,9 @@ Add in your `composer.json` with following require entry:
 
 ```json
 {
-    "require": {
-        "wake/Twig-Assetic-Integration-Provider": "*"
-    }
+  "require": {
+    "wake/Twig-Assetic-Integration-Provider": "*"
+  }
 }
 ```
 
@@ -30,7 +30,7 @@ then run `composer install` or `composer update`.
 
 
 ```php
-$app->register (new Silex\Provider\TwigAsseticIntegrationProvider (), array (
+$app->register (new Wake\Silex\Provider\TwigAsseticIntegrationProvider (), array (
   'assetic.asset.root'        => 'your_asset_files_root',
   'assetic.asset.output_root' => 'your_asset_output_root',
   'assetic.asset.debug'       => false
@@ -43,7 +43,7 @@ Important: Make sure you are using [TwigServiceProvider](http://silex.sensiolabs
 
 Juse like [Assetic twig extension](https://github.com/kriswallsmith/assetic#twig)
 
-```php
+```html
 {% stylesheets '/path/to/sass/main.sass' filter='sass,?yui_css' output='css/all.css' %}
     <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
 {% endstylesheets %}

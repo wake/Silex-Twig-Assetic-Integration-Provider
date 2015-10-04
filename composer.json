@@ -1,10 +1,10 @@
 {
-  "name": "wake/twig-assetic-bundle-provider",
-  "description": "Twig / Assetic bundle provdider ",
+  "name": "wake/twig-assetic-integration-provider",
+  "description": "An integration library of Twig and Assetic works for Silex.",
   "version": "v0.0.0",
   "type": "library",
   "keywords": ["twig", "assetic", "silex"],
-  "homepage": "https://github.com/wake/Twig-Assetic-Bundle-Provider",
+  "homepage": "https://github.com/wake/Twig-Assetic-Integration-Provider",
   "license": "MIT",
   "authors": [
     {
@@ -14,8 +14,8 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/wake/Twig-Assetic-Bundle-Provider/issues",
-    "source": "https://github.com/wake/Twig-Assetic-Bundle-Provider"
+    "issues": "https://github.com/wake/Twig-Assetic-Integration-Provider/issues",
+    "source": "https://github.com/wake/Twig-Assetic-Integration-Provider"
   },
   "require": {
     "silex/silex": "~1.3",
@@ -24,8 +24,8 @@
   },
   "autoload": {
     "psr-0": {
-      "Silex\\": "src/",
-      "Twig_": "src/"
+      "Wake\\Silex\\": "src/",
+      "Wake\\Twig_": "src/"
     }
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-  namespace Silex\Provider;
+  namespace Wake\Silex\Provider;
 
   use Silex\Application;
   use Silex\ServiceProviderInterface;
@@ -80,11 +80,11 @@
 
       // Replace Twig loader
       $app['twig.loader.filesystem'] = $app->share (function ($app) {
-        return new \Twig_AsseticLoader_Filesystem ($app['twig.path']);
+        return new \Wake\Twig_AsseticLoader_Filesystem ($app['twig.path']);
       });
 
       $app['twig.loader'] = $app->share (function ($app) {
-        return new \Twig_AsseticLoader_Chain (array(
+        return new \Wake\Twig_AsseticLoader_Chain (array(
           $app['twig.loader.array'],
           $app['twig.loader.filesystem'],
         ));
