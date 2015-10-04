@@ -18,11 +18,11 @@
 
 
   /**
-   * Bundle assetic service with Twig
+   * Integration assetic service with Twig
    *
    * @author Wake Liu <wake.gs@gmail.com>
    */
-  class TwigAsseticBundleProvider implements ServiceProviderInterface {
+  class TwigAsseticIntegrationProvider implements ServiceProviderInterface {
 
     /**
      *

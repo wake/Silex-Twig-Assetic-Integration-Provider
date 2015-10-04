@@ -1,1 +1,1 @@
-# Twig-Assetic-Bundle-Provider
+# Twig-Assetic-Integration-Provider
