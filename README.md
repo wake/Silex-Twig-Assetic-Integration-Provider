@@ -1,6 +1,6 @@
 # Twig Assetic Integration Provider
 
-This library is an integration service of [Twig](http://twig.sensiolabs.org) and [Assetic](https://github.com/kriswallsmith/assetic) works for [Silex](http://silex.sensiolabs.org/.
+This library is an integration of [Twig](http://twig.sensiolabs.org) and [Assetic](https://github.com/kriswallsmith/assetic) works for [Silex](http://silex.sensiolabs.org/).
 
 The original [twig extension of Assetic](https://github.com/kriswallsmith/assetic#twig) is not easy to use. There's a lot of work (code) to do and you need always to know which templates require assets.
 
