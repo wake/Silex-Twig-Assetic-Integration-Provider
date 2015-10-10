@@ -17,6 +17,7 @@
   use Assetic\AssetManager;
 
   use Wake\Assetic\Extension\Twig\TwigAsseticIntegrationExtension;
+  use Wake\Assetic\Extension\Twig\TwigAsseticIntegrationFormulaLoader;
 
 
   /**
@@ -70,7 +71,7 @@
 
       $app['assetic.lazy_asset_manager'] = $app->share (function ($app) {
         $lazyAssetManager = new LazyAssetManager ($app['assetic.asset_factory']);
-        $lazyAssetManager->setLoader ('twig', new TwigFormulaLoader ($app['twig']));
+        $lazyAssetManager->setLoader ('twig', new TwigAsseticIntegrationFormulaLoader ($app['twig'], null, $app));
         return $lazyAssetManager;
       });
 
