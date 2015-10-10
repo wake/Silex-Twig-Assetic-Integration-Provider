@@ -16,6 +16,8 @@
   use Assetic\FilterManager;
   use Assetic\AssetManager;
 
+  use Wake\Assetic\Extension\Twig\TwigAsseticIntegrationExtension;
+
 
   /**
    * Integration assetic service with Twig
@@ -40,6 +42,11 @@
         'cssmin'      => true,
         'csscompress' => true,
         'jsmin'       => true,
+      );
+
+      $app['assetic.filters.default'] = array (
+        'cssmin'     => '\Assetic\Filter\CssMinFilter',
+        'cssrewrite' => '\Assetic\Filter\CssRewriteFilter',
       );
 
       $app['assetic.filter_manager'] = $app->share (function ($app) {
@@ -98,7 +105,7 @@
      */
     function boot (Application $app) {
 
-      $app['twig']->addExtension (new AsseticExtension ($app['assetic.asset_factory']));
+      $app['twig']->addExtension (new TwigAsseticIntegrationExtension ($app['assetic.asset_factory'], array (), null, $app));
 
       $app->after (function (Request $request, Response $response) use ($app) {
 
