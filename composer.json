@@ -1,7 +1,7 @@
 {
   "name": "wake/twig-assetic-integration-provider",
   "description": "An integration library of Twig and Assetic works for Silex.",
-  "version": "v0.1.0",
+  "version": "v0.2.0",
   "type": "library",
   "keywords": ["twig", "assetic", "silex"],
   "homepage": "https://github.com/wake/Twig-Assetic-Integration-Provider",

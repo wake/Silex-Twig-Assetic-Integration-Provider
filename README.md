@@ -41,7 +41,7 @@ $app->register (new Wake\Silex\Provider\TwigAsseticIntegrationProvider (), array
 ));
 ```
 
-Important: Make sure you are using [TwigServiceProvider](http://silex.sensiolabs.org/doc/providers/twig.html) and have registered before this code. It override some Twig loaders to force it expode little template informations.
+Important: Make sure you are using [TwigServiceProvider](http://silex.sensiolabs.org/doc/providers/twig.html) and have registered before this code. It override some Twig loaders to force it expode some template information.
 
 ## Usage
 
@@ -55,7 +55,7 @@ Just as [Assetic twig extension](https://github.com/kriswallsmith/assetic#twig)
 
 ## Filter Auto Detecting
 
-Twig Assetic Integration Provider provides [Assetic filters](https://github.com/kriswallsmith/assetic#filters) auto detecting list as below:
+Twig Assetic Integration Provider provides [Assetic filters](https://github.com/kriswallsmith/assetic#filters) auto detecting as below list:
 
 ### CssMinFilter
 
