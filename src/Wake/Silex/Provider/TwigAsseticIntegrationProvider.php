@@ -36,16 +36,10 @@
       $app['assetic.asset.root'] = '';
       $app['assetic.asset.output_root'] = '';
       $app['assetic.debug'] = false;
-      $app['assetic.filters'] = array (
-        'csscopyfile' => true,
-        'lessphp'     => true,
-        'scssphp'     => true,
-        'cssmin'      => true,
-        'csscompress' => true,
-        'jsmin'       => true,
+      $app['assetic.filter'] = array (
       );
 
-      $app['assetic.filters.default'] = array (
+      $app['assetic.filter.default'] = array (
         'cssmin'     => '\Assetic\Filter\CssMinFilter',
         'cssrewrite' => '\Assetic\Filter\CssRewriteFilter',
       );

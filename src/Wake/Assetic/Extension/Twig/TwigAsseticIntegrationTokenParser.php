@@ -148,14 +148,17 @@ class TwigAsseticIntegrationTokenParser extends AsseticTokenParser
 
     protected function loadFilters ($filters) {
 
-        $optionFilters  = $this->app['assetic.filters'];
-        $defaultFilters = $this->app['assetic.filters.default']; 
+        $optionFilters  = $this->app['assetic.filter'];
+        $defaultFilters = $this->app['assetic.filter.default']; 
 
         foreach ($filters as $filter) {
 
             $filter = ltrim ($filter, '?');
 
-            if (isset ($defaultFilters[$filter])) {
+            if (isset ($optionFilters[$filter]))
+                $this->app['assetic.filter_manager']->set ($filter, $optionFilters[$filter]);
+
+            else if (isset ($defaultFilters[$filter])) {
 
                 $filterClass = $defaultFilters[$filter];
 
