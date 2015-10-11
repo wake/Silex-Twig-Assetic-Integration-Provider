@@ -33,7 +33,11 @@ then run `composer install` or `composer update`.
 $app->register (new Wake\Silex\Provider\TwigAsseticIntegrationProvider (), array (
   'assetic.asset.root'        => 'your_asset_files_root',
   'assetic.asset.output_root' => 'your_asset_output_root',
-  'assetic.asset.debug'       => false
+  'assetic.debug'             => false,
+  'assetic.filter'            => array (
+    'sass'    => new \Assetic\Filter\SassFilter ('/path/to/parser/sass'),
+    'yui_css' => new \Assetic\Filter\Yui\CssCompressorFilter ('/path/to/yuicompressor.jar')
+  )
 ));
 ```
 
@@ -41,13 +45,28 @@ Important: Make sure you are using [TwigServiceProvider](http://silex.sensiolabs
 
 ## Usage
 
-Juse like [Assetic twig extension](https://github.com/kriswallsmith/assetic#twig)
+Just as [Assetic twig extension](https://github.com/kriswallsmith/assetic#twig)
 
 ```html
 {% stylesheets '/path/to/sass/main.sass' filter='sass,?yui_css' output='css/all.css' %}
     <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
 {% endstylesheets %}
 ```
+
+## Filter Auto Detecting
+
+Twig Assetic Integration Provider provides [Assetic filters](https://github.com/kriswallsmith/assetic#filters) auto detecting list as below:
+
+### CssMinFilter
+
+- Description: Minifies CSS
+- Filter name: `cssmin`
+- Requirement: [natxet/CssMin](https://github.com/natxet/CssMin)
+
+### CssRewriteFilter
+
+- Description: Fixes relative URLs in CSS assets when moving to a new URL
+- Filter name: `cssrewrite`
 
 ## Feedback
 
