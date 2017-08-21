@@ -1,4 +1,4 @@
-# Twig Assetic Integration Provider
+# Silex Twig Assetic Integration Provider
 
 This is an integration library of [Twig](http://twig.sensiolabs.org) and [Assetic](https://github.com/kriswallsmith/assetic) works for [Silex](http://silex.sensiolabs.org/).
 
