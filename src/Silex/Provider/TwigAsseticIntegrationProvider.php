@@ -1,6 +1,6 @@
 <?php
 
-  namespace Wake\Silex\Provider;
+  namespace Silex\Provider;
 
   use Silex\Application;
   use Silex\ServiceProviderInterface;
@@ -16,8 +16,8 @@
   use Assetic\FilterManager;
   use Assetic\AssetManager;
 
-  use Wake\Assetic\Extension\Twig\TwigAsseticIntegrationExtension;
-  use Wake\Assetic\Extension\Twig\TwigAsseticIntegrationFormulaLoader;
+  use Assetic\Extension\Twig\TwigAsseticIntegrationExtension;
+  use Assetic\Extension\Twig\TwigAsseticIntegrationFormulaLoader;
 
 
   /**
@@ -82,11 +82,11 @@
 
       // Replace Twig loader
       $app['twig.loader.filesystem'] = $app->share (function ($app) {
-        return new \Wake\Twig_AsseticLoader_Filesystem ($app['twig.path']);
+        return new \Twig_AsseticLoader_Filesystem ($app['twig.path']);
       });
 
       $app['twig.loader'] = $app->share (function ($app) {
-        return new \Wake\Twig_AsseticLoader_Chain (array(
+        return new \Twig_AsseticLoader_Chain (array(
           $app['twig.loader.array'],
           $app['twig.loader.filesystem'],
         ));

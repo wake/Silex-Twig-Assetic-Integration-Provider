@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Wake\Assetic\Extension\Twig;
+namespace Assetic\Extension\Twig;
 
 use Assetic\Extension\Twig\AsseticTokenParser;
 use Assetic\Factory\AssetFactory;
@@ -149,7 +149,7 @@ class TwigAsseticIntegrationTokenParser extends AsseticTokenParser
     protected function loadFilters ($filters) {
 
         $optionFilters  = $this->app['assetic.filter'];
-        $defaultFilters = $this->app['assetic.filter.default']; 
+        $defaultFilters = $this->app['assetic.filter.default'];
 
         foreach ($filters as $filter) {
 

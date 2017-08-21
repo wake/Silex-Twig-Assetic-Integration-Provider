@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Wake\Assetic\Extension\Twig;
+namespace Assetic\Extension\Twig;
 
 use Assetic\Factory\Loader\FormulaLoaderInterface;
 use Assetic\Factory\Resource\ResourceInterface;

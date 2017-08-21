@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Wake\Assetic\Extension\Twig;
+namespace Assetic\Extension\Twig;
 
 use Assetic\Extension\Twig\AsseticExtension;
 use Assetic\Factory\AssetFactory;

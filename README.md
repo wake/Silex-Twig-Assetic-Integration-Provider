@@ -13,7 +13,7 @@ Add in your `composer.json` with following require entry:
 ```json
 {
   "require": {
-    "wake/Twig-Assetic-Integration-Provider": "*"
+    "wake/Silex-Twig-Assetic-Integration-Provider": "*"
   }
 }
 ```
@@ -21,7 +21,7 @@ Add in your `composer.json` with following require entry:
 or using composer:
 
 ```bash
-$ composer require wake/Twig-Assetic-Integration-Provider:*
+$ composer require wake/Silex-Twig-Assetic-Integration-Provider:*
 ```
 
 then run `composer install` or `composer update`.
@@ -30,7 +30,7 @@ then run `composer install` or `composer update`.
 
 
 ```php
-$app->register (new Wake\Silex\Provider\TwigAsseticIntegrationProvider (), array (
+$app->register (new Silex\Provider\SilexTwigAsseticIntegrationProvider (), array (
   'assetic.asset.root'        => 'your_asset_files_root',
   'assetic.asset.output_root' => 'your_asset_output_root',
   'assetic.debug'             => false,
