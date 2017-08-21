@@ -30,7 +30,7 @@ then run `composer install` or `composer update`.
 
 
 ```php
-$app->register (new Silex\Provider\SilexTwigAsseticIntegrationProvider (), array (
+$app->register (new Silex\Provider\TwigAsseticIntegrationProvider (), array (
   'assetic.asset.root'        => 'your_asset_files_root',
   'assetic.asset.output_root' => 'your_asset_output_root',
   'assetic.debug'             => false,
